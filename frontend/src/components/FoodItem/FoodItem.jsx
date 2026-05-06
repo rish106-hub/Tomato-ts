@@ -36,11 +36,11 @@ const FoodItem = ({ image, name, price, desc , id, category }) => {
 
     return (
         <>
-            <div className='food-item' onClick={handleItemClick} style={{ cursor: 'pointer' }}>
+            <div className='food-item' onClick={handleItemClick} role="article" aria-label={`View ${name} details`}>
                 <div className='food-item-img-container'>
                     <img className='food-item-image' src={getImageUrl(url, image)} alt="" />
                     {!cartItems[id] || cartItems[id] === 0
-                    ?<img className='add' onClick={(e) => { e.stopPropagation(); addToCart(id); }} src={assets.add_icon_white} alt="" />
+                    ?<img className='add' onClick={(e) => { e.stopPropagation(); addToCart(id); }} src={assets.add_icon_white} alt="Add to cart" role="button" tabIndex={0} />
                     :<div className="food-item-counter">
                             <img src={assets.remove_icon_red} onClick={(e) => { e.stopPropagation(); removeFromCart(id); }} alt="" />
                             <p>{cartItems[id] || 0}</p>

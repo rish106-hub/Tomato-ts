@@ -5,8 +5,13 @@
     padding: 8px 4%;
 }
 
-.navbar .logo {
-    width: max(10%, 80px);
+.admin-logo-wordmark {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #F0582A;
+    letter-spacing: -0.02em;
+    font-style: italic;
 }
 
 .navbar-right {
@@ -23,9 +28,9 @@
 
 .logout-btn {
     padding: 6px 16px;
-    border: 1.5px solid tomato;
+    border: 1.5px solid #F0582A;
     background: transparent;
-    color: tomato;
+    color: #F0582A;
     border-radius: 6px;
     cursor: pointer;
     font-size: 13px;
@@ -34,7 +39,7 @@
 }
 
 .logout-btn:hover {
-    background: tomato;
+    background: #F0582A;
     color: white;
 }
 

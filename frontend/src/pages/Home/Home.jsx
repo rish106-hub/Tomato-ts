@@ -4,7 +4,6 @@ import Header from '../../components/Header/Header'
 import RestaurantShowcase from '../../components/RestaurantShowcase/RestaurantShowcase'
 import ExploreMenu from '../../components/ExploreMenu/ExploreMenu'
 import FoodDisplay from '../../components/FoodDisplay/FoodDisplay'
-import AppDownload from '../../components/AppDownload/AppDownload'
 import { sectionRoutes } from '../../utils/sectionRoutes'
 
 const Home = () => {
@@ -24,10 +23,8 @@ const Home = () => {
   return (
     <>
       <Header/>
-      <RestaurantShowcase limit={4} />
       <ExploreMenu setCategory={setCategory} category={category}/>
       <FoodDisplay category={category}/>
-      <AppDownload/>
     </>
   )
 }
