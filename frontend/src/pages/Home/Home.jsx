@@ -23,6 +23,7 @@ const Home = () => {
   return (
     <>
       <Header/>
+      <RestaurantShowcase limit={4} />
       <ExploreMenu setCategory={setCategory} category={category}/>
       <FoodDisplay category={category}/>
     </>
