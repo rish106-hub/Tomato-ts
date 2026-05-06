@@ -7,14 +7,13 @@ import { StoreContext } from '../../Context/StoreContext'
 const Navbar = ({ setShowLogin }) => {
 
   const [menu, setMenu] = useState("home");
-  const { getTotalCartAmount, token, setToken, searchQuery, setSearchQuery } = useContext(StoreContext);
+  const { getTotalCartAmount, token, logout: ctxLogout, searchQuery, setSearchQuery } = useContext(StoreContext);
   const navigate = useNavigate();
 
   const logout = () => {
-    localStorage.removeItem("token");
-    setToken("");
-    navigate('/')
-  }
+    ctxLogout();
+    navigate('/');
+  };
 
   return (
     <nav className='navbar' aria-label="Main navigation">

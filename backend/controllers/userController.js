@@ -3,66 +3,62 @@ import bcrypt from "bcryptjs";
 import validator from "validator";
 import userModel from "../models/userModel.js";
 
-//create token
+const TOKEN_EXPIRY = "7d";
+
 const createToken = (id) => {
-    return jwt.sign({id}, process.env.JWT_SECRET);
-}
+    return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: TOKEN_EXPIRY });
+};
 
-//login user
-const loginUser = async (req,res) => {
-    const {email, password} = req.body;
-    try{
-        const user = await userModel.findOne({email})
+const loginUser = async (req, res) => {
+    const { email, password } = req.body;
+    try {
+        const user = await userModel.findOne({ email: email?.toLowerCase()?.trim() });
+        if (!user) return res.json({ success: false, message: "No account found with this email" });
+        if (!user.isActive) return res.json({ success: false, message: "Account suspended. Contact support." });
 
-        if(!user){
-            return res.json({success:false,message: "User does not exist"})
-        }
+        const isMatch = await bcrypt.compare(password, user.password);
+        if (!isMatch) return res.json({ success: false, message: "Incorrect password" });
 
-        const isMatch = await bcrypt.compare(password, user.password)
+        await userModel.findByIdAndUpdate(user._id, {
+            lastLogin: new Date(),
+            $inc: { loginCount: 1 }
+        });
 
-        if(!isMatch){
-            return res.json({success:false,message: "Invalid credentials"})
-        }
-
-        const token = createToken(user._id)
-        res.json({success:true,token})
+        const token = createToken(user._id);
+        res.json({ success: true, token, user: { name: user.name, email: user.email, role: user.role } });
     } catch (error) {
-        console.log(error);
-        res.json({success:false,message:"Error"})
+        console.error("loginUser:", error);
+        res.json({ success: false, message: "Something went wrong. Try again." });
     }
-}
+};
 
-//register user
-const registerUser = async (req,res) => {
-    const {name, email, password} = req.body;
-    try{
-        //check if user already exists
-        const exists = await userModel.findOne({email})
-        if(exists){
-            return res.json({success:false,message: "User already exists"})
-        }
+const registerUser = async (req, res) => {
+    const { name, email, password } = req.body;
+    try {
+        if (!name?.trim()) return res.json({ success: false, message: "Name is required" });
+        if (!validator.isEmail(email)) return res.json({ success: false, message: "Enter a valid email address" });
+        if (password.length < 8) return res.json({ success: false, message: "Password must be at least 8 characters" });
 
-        // validating email format & strong password
-        if(!validator.isEmail(email)){
-            return res.json({success:false,message: "Please enter a valid email"})
-        }
-        if(password.length<8){
-            return res.json({success:false,message: "Please enter a strong password"})
-        }
+        const exists = await userModel.findOne({ email: email.toLowerCase().trim() });
+        if (exists) return res.json({ success: false, message: "An account with this email already exists" });
 
-        // hashing user password
-        const salt = await bcrypt.genSalt(10); // the more no. round the more time it will take
-        const hashedPassword = await bcrypt.hash(password, salt)
+        const salt = await bcrypt.genSalt(12);
+        const hashedPassword = await bcrypt.hash(password, salt);
 
-        const newUser = new userModel({name, email, password: hashedPassword})
-        const user = await newUser.save()
-        const token = createToken(user._id)
-        res.json({success:true,token})
-
-    } catch(error){
-        console.log(error);
-        res.json({success:false,message:"Error"})
+        const newUser = new userModel({
+            name: name.trim(),
+            email: email.toLowerCase().trim(),
+            password: hashedPassword,
+            lastLogin: new Date(),
+            loginCount: 1,
+        });
+        const user = await newUser.save();
+        const token = createToken(user._id);
+        res.json({ success: true, token, user: { name: user.name, email: user.email, role: user.role } });
+    } catch (error) {
+        console.error("registerUser:", error);
+        res.json({ success: false, message: "Registration failed. Try again." });
     }
-}
+};
 
-export {loginUser, registerUser}
+export { loginUser, registerUser };
