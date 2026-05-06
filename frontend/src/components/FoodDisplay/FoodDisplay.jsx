@@ -14,9 +14,9 @@ const FoodDisplay = ({category}) => {
   return (
     <div className='food-display' id='food-display'>
       <div className='food-display-header'>
-        <p className="food-display-kicker">{category === "All" ? "Tonight's strongest sellers" : `${category} that converts fast`}</p>
+        <p className="food-display-kicker">{category === "All" ? "Delhi NCR favourites for tonight" : `${category} that lands fast in NCR`}</p>
         <h2 className="food-display-title">
-          {category === "All" ? "High-hunger dishes with Indian flavour cues front and center." : `${category} worth ordering before you overthink it.`}
+          {category === "All" ? "High-hunger dishes shaped around what Delhi, Noida and Gurgaon actually order." : `${category} worth ordering before the craving turns into compromise.`}
         </h2>
       </div>
       <div className='food-display-list'>

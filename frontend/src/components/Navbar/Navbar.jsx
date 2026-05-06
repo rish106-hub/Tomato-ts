@@ -20,7 +20,7 @@ const Navbar = ({ setShowLogin }) => {
     <nav className='navbar' aria-label="Main navigation">
       <Link to='/' className='navbar-logo' aria-label="Crave home">
         <span className='logo-wordmark'>crave</span>
-        <span className='logo-tag'>india's hunger, handled</span>
+        <span className='logo-tag'>Delhi NCR hunger, handled</span>
       </Link>
 
       <ul className="navbar-menu">
@@ -35,7 +35,7 @@ const Navbar = ({ setShowLogin }) => {
           <img src={assets.search_icon} alt="" aria-hidden="true" className="search-icon" />
           <input
             type="text"
-            placeholder="Search biryani, momos, chaat..."
+            placeholder="Search biryani, momos, chaat in NCR..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="search-input"

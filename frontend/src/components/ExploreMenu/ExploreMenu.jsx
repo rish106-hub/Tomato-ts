@@ -10,9 +10,10 @@ const ExploreMenu = ({ category, setCategory }) => {
     <div className='explore-menu' id='explore-menu'>
       <div className='explore-menu-header'>
         <p className='explore-menu-kicker'>Choose the craving, not just the category</p>
-        <h2 className='explore-menu-title'>Built for Indian search habits and Indian appetite.</h2>
+        <h2 className='explore-menu-title'>Built for how Delhi NCR actually searches for food.</h2>
         <p className='explore-menu-copy'>
-          Jump straight to biryani, rolls, momos, thalis or a proper chaat fix. Every image is now tagged to the menu it belongs to.
+          Jump straight to biryani, rolls, momos, thalis or a proper chaat fix. Every image is tagged to the menu it belongs to,
+          so the landing page feels closer to CP, Lajpat, Noida and Gurgaon ordering behaviour than a generic food template.
         </p>
       </div>
       <div className="explore-menu-list" role="list">
