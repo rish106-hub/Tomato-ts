@@ -48,7 +48,7 @@ const Cart = () => {
                   <p>{formatPrice(item.price, currency)}</p>
                   <div>{itemQuantity}</div>
                   <p>{formatPrice(item.price * itemQuantity, currency)}</p>
-                  <p className='cart-items-remove-icon' onClick={()=>removeFromCart(item._id)}>x</p>
+                  <button className='cart-items-remove-icon' onClick={()=>removeFromCart(item._id)} aria-label={`Remove ${item.name}`}>×</button>
                 </div>
                 <hr />
               </div>)

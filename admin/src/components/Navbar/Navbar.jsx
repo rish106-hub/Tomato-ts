@@ -5,7 +5,7 @@ import { assets } from '../../assets/assets'
 const Navbar = ({ onLogout }) => {
     return (
         <div className='navbar'>
-            <img className='logo' src={assets.logo} alt="" />
+            <span className='admin-logo-wordmark'>crave</span>
             <div className='navbar-right'>
                 <span className='navbar-admin-label'>Admin Panel</span>
                 <button className='logout-btn' onClick={onLogout}>Logout</button>
