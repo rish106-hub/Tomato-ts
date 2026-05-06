@@ -62,7 +62,7 @@ import facebook_icon from './facebook_icon.png';
 export const menu_list = [
     {
         _id: "1",
-        menu_name: "Salad",
+        menu_name: "Biryani",
         menu_image: menu_1
     },
     {
@@ -72,32 +72,32 @@ export const menu_list = [
     },
     {
         _id: "3",
-        menu_name: "Deserts",
+        menu_name: "Desserts",
         menu_image: menu_3
     },
     {
         _id: "4",
-        menu_name: "Sandwich",
+        menu_name: "Thali",
         menu_image: menu_4
     },
     {
         _id: "5",
-        menu_name: "Cake",
+        menu_name: "South Indian",
         menu_image: menu_5
     },
     {
         _id: "6",
-        menu_name: "Pure Veg",
+        menu_name: "Momos",
         menu_image: menu_6
     },
     {
         _id: "7",
-        menu_name: "Pasta",
+        menu_name: "Chinese",
         menu_image: menu_7
     },
     {
         _id: "8",
-        menu_name: "Noodles",
+        menu_name: "Chaat",
         menu_image: menu_8
     }
 ];

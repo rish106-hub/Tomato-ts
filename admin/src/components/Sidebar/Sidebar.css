@@ -29,7 +29,7 @@
 }
 .sidebar-option.active {
  background-color: #fff0ed;
- border-color: tomato;
+ border-color: #F0582A;
 }
 @media (max-width:900px) {
     .sidebar-option p{

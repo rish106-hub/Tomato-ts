@@ -12,7 +12,7 @@ const FoodDisplay = ({category}) => {
 
   return (
     <div className='food-display' id='food-display'>
-      <h2>Top dishes near you</h2>
+      <h2 className="food-display-title">Top picks for you</h2>
       <div className='food-display-list'>
         {displayList.length > 0 ? (
           displayList.map((item)=>{
