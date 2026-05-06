@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
-import { food_list, menu_list } from "../assets/assets";
+import { menu_list } from "../assets/assets";
+import { buildRestaurantsFromFoods, fallbackFoods, normalizeMarketplaceFoods } from "../data/marketplace";
 import axios from "axios";
 
 export const StoreContext = createContext(null);
@@ -12,7 +13,8 @@ const StoreContextProvider = (props) => {
     const [token, setToken] = useState("")
     const [searchQuery, setSearchQuery] = useState("")
     const [filteredFoodList, setFilteredFoodList] = useState([])
-    const currency = "₹";
+    const [restaurants, setRestaurants] = useState([])
+    const currency = "INR";
     const deliveryCharge = 50;
 
     const saveCart = async (newCartItems, authToken = token) => {
@@ -58,8 +60,16 @@ const StoreContextProvider = (props) => {
     }
 
     const fetchFoodList = async () => {
-        const response = await axios.get(url + "/api/food/list");
-        setFoodList(response.data.data)
+        try {
+            const response = await axios.get(url + "/api/food/list");
+            const normalizedFoods = normalizeMarketplaceFoods(response.data.data || []);
+            setFoodList(normalizedFoods)
+            setRestaurants(buildRestaurantsFromFoods(normalizedFoods))
+        } catch (error) {
+            console.error('Falling back to curated marketplace data:', error)
+            setFoodList(fallbackFoods)
+            setRestaurants(buildRestaurantsFromFoods(fallbackFoods))
+        }
     }
 
     const loadCartData = async (authToken) => {
@@ -89,7 +99,10 @@ const StoreContextProvider = (props) => {
             return (
                 item.name.toLowerCase().includes(searchTerm) ||
                 item.category.toLowerCase().includes(searchTerm) ||
-                item.description.toLowerCase().includes(searchTerm)
+                item.description.toLowerCase().includes(searchTerm) ||
+                item.restaurantName?.toLowerCase().includes(searchTerm) ||
+                item.restaurantArea?.toLowerCase().includes(searchTerm) ||
+                item.cuisines?.some((cuisine) => cuisine.toLowerCase().includes(searchTerm))
             )
         })
         setFilteredFoodList(filtered)
@@ -131,6 +144,7 @@ const StoreContextProvider = (props) => {
         food_list,
         filteredFoodList,
         menu_list,
+        restaurants,
         cartItems,
         addToCart,
         removeFromCart,
