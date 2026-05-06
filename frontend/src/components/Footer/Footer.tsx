@@ -33,7 +33,10 @@ const Footer: React.FC = () => {
       <div className="footer-content">
         <div className="footer-content-left">
           <span className="footer-brand-wordmark">crave</span>
-          <p>Premium food delivery, curated for the discerning palate. Feed your craving, any time.</p>
+          <p>
+            Indian comfort food for real city cravings. Biryani for dinner, chaat for the dip in energy,
+            momos for late night, and thalis when you want a proper meal instead of snacks pretending to be one.
+          </p>
           <div className="footer-social-icons">
             <img
               src={assets.facebook_icon}
@@ -53,7 +56,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="footer-content-center">
-          <h2>Company</h2>
+          <h2>Explore</h2>
           <ul>
             <li onClick={() => handleNavigation('/')}>Home</li>
             <li onClick={() => handleNavigation('/about')}>About us</li>
@@ -62,15 +65,15 @@ const Footer: React.FC = () => {
           </ul>
         </div>
         <div className="footer-content-right">
-          <h2>Get in touch</h2>
+          <h2>Support</h2>
           <ul>
             <li onClick={handlePhone}>+91 98765 43210</li>
-            <li onClick={handleContact}>rishavdewan10@gmail.com</li>
+            <li onClick={handleContact}>hello@cravefood.in</li>
           </ul>
         </div>
       </div>
       <hr />
-      <p className="footer-copyright">Copyright 2025 © Crave — All rights reserved.</p>
+      <p className="footer-copyright">Copyright 2026 © Crave Food Delivery India. All rights reserved.</p>
     </footer>
   );
 };

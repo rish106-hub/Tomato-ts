@@ -20,6 +20,7 @@ const Navbar = ({ setShowLogin }) => {
     <nav className='navbar' aria-label="Main navigation">
       <Link to='/' className='navbar-logo' aria-label="Crave home">
         <span className='logo-wordmark'>crave</span>
+        <span className='logo-tag'>india's hunger, handled</span>
       </Link>
 
       <ul className="navbar-menu">
@@ -34,7 +35,7 @@ const Navbar = ({ setShowLogin }) => {
           <img src={assets.search_icon} alt="" aria-hidden="true" className="search-icon" />
           <input
             type="text"
-            placeholder="Search food..."
+            placeholder="Search biryani, momos, chaat..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="search-input"
@@ -53,7 +54,7 @@ const Navbar = ({ setShowLogin }) => {
               <img src={assets.profile_icon} alt="Profile" />
               <ul className='navbar-profile-dropdown' role="menu">
                 <li role="menuitem" tabIndex={0} onClick={() => navigate('/myorders')} onKeyDown={e => e.key === 'Enter' && navigate('/myorders')}>
-                  <img src={assets.bag_icon} alt="" /> <p>Orders</p>
+                  <img src={assets.bag_icon} alt="" /> <p>My orders</p>
                 </li>
                 <hr />
                 <li role="menuitem" tabIndex={0} onClick={logout} onKeyDown={e => e.key === 'Enter' && logout()}>

@@ -5,97 +5,57 @@ const Delivery: React.FC = () => {
   return (
     <div className="delivery-page">
       <div className="delivery-container">
-        <h1>Delivery Across Delhi NCR</h1>
-        <div className="delivery-content">
-          <section className="delivery-section">
-            <h2>Where We Deliver</h2>
-            <p>
-              Crave delivers to 40+ neighbourhoods across Delhi NCR. If you can see us on the map,
-              we'll be at your door — hot, fresh, and on time.
-            </p>
-            <div className="areas-grid">
-              <div className="area-item">
-                <h3>Central Delhi</h3>
-                <p>Connaught Place, Karol Bagh, Paharganj</p>
-                <span className="area-eta">Avg: 20–25 mins</span>
-              </div>
-              <div className="area-item">
-                <h3>South Delhi</h3>
-                <p>Hauz Khas, Lajpat Nagar, Saket, Greater Kailash</p>
-                <span className="area-eta">Avg: 25–35 mins</span>
-              </div>
-              <div className="area-item">
-                <h3>Noida</h3>
-                <p>Sector 18, 62, 63, 125, 137</p>
-                <span className="area-eta">Avg: 30–40 mins</span>
-              </div>
-              <div className="area-item">
-                <h3>Gurgaon</h3>
-                <p>Cyber City, Golf Course Road, MG Road, Sohna Road</p>
-                <span className="area-eta">Avg: 30–40 mins</span>
-              </div>
-              <div className="area-item">
-                <h3>North Delhi</h3>
-                <p>Rohini, Pitampura, Model Town, Kamla Nagar</p>
-                <span className="area-eta">Avg: 25–35 mins</span>
-              </div>
-              <div className="area-item">
-                <h3>East Delhi</h3>
-                <p>Laxmi Nagar, Preet Vihar, Mayur Vihar</p>
-                <span className="area-eta">Avg: 25–35 mins</span>
-              </div>
-            </div>
-          </section>
+        <section className="delivery-hero">
+          <p className="delivery-kicker">Delivery</p>
+          <h1>Warm food, realistic ETAs and fewer trust-breaking promises.</h1>
+          <p className="delivery-lead">
+            Crave is tuned for Delhi NCR ordering patterns: office lunches, late evening snacks, family dinners and quick comfort orders
+            that need clean delivery communication instead of vague timelines.
+          </p>
+        </section>
 
-          <section className="delivery-section">
-            <h2>Delivery Options</h2>
-            <div className="delivery-options">
-              <div className="option-item">
-                <h3>Standard Delivery</h3>
-                <p>Free delivery on orders above ₹499</p>
-                <p>Delivery fee ₹30–₹50 on smaller orders</p>
-              </div>
-              <div className="option-item">
-                <h3>Priority Delivery</h3>
-                <p>Your order jumps the queue — arrives in under 25 minutes</p>
-                <p>Additional ₹40 priority fee</p>
-              </div>
-              <div className="option-item">
-                <h3>Scheduled Delivery</h3>
-                <p>Order up to 24 hours in advance — plan your meals, your way</p>
-                <p>No additional charge</p>
-              </div>
+        <section className="delivery-section">
+          <h2>Coverage that matches urban ordering behaviour</h2>
+          <p>
+            The service language and delivery estimates are written for dense Indian neighbourhoods where timing changes by traffic,
+            building access and kitchen load. That means realistic ranges, not fake certainty.
+          </p>
+          <div className="delivery-band">
+            <div className="delivery-band-item">
+              <h3>Core zones</h3>
+              <p>South Delhi, Central Delhi, Gurgaon, Noida and nearby high-frequency residential clusters.</p>
             </div>
-          </section>
+            <div className="delivery-band-item">
+              <h3>Peak windows</h3>
+              <p>Lunch: 12 PM to 3 PM. Evening cravings: 5 PM to 8 PM. Late-night snack rush: 9 PM onwards.</p>
+            </div>
+            <div className="delivery-band-item">
+              <h3>Typical basket</h3>
+              <p>Solo orders, office group meals, family biryani nights, fast street-food style snack drops.</p>
+            </div>
+          </div>
+        </section>
 
-          <section className="delivery-section">
-            <h2>Real-Time Order Tracking</h2>
-            <p>
-              From the moment you tap "Order Now" to the second the bag lands at your door,
-              you know exactly where your food is. No more "5 minutes ho jayega" guesses.
-            </p>
+        <section className="delivery-section delivery-section-split">
+          <div className="delivery-story-block">
+            <h2>Delivery structure</h2>
             <ul className="tracking-features">
-              <li>Order confirmed instantly</li>
-              <li>Restaurant starts prep — live status update</li>
-              <li>Delivery partner assigned with ETA</li>
-              <li>Live map tracking en route</li>
-              <li>Arrival notification on your phone</li>
+              <li>Standard delivery fee starts from INR 50 and is surfaced before checkout.</li>
+              <li>Orders above the free-delivery threshold are highlighted clearly on the cart journey.</li>
+              <li>Online payments and cash on delivery remain available where the service area supports them.</li>
+              <li>Address details, gate notes and call-on-arrival instructions remain part of the actual flow.</li>
             </ul>
-          </section>
-
-          <section className="delivery-section">
-            <h2>Delivery Instructions</h2>
-            <p>
-              Tell us exactly how you want it delivered — we'll pass every word to your delivery partner:
-            </p>
+          </div>
+          <div className="delivery-story-block">
+            <h2>Tracking that sounds human</h2>
             <ul className="special-instructions">
-              <li>Ring the bell / call on arrival</li>
-              <li>Leave at the door (contactless)</li>
-              <li>Specific gate or building entrance details</li>
-              <li>Handling instructions — extra careful with liquids, etc.</li>
+              <li>Order accepted and kitchen prep updates are immediate.</li>
+              <li>Rider assignment appears with an ETA range instead of overconfident minute counts.</li>
+              <li>Apartment, tower and gate instructions are treated as delivery-critical, not optional text.</li>
+              <li>Support language stays aligned with Indian delivery expectations and address complexity.</li>
             </ul>
-          </section>
-        </div>
+          </div>
+        </section>
       </div>
     </div>
   );

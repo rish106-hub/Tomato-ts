@@ -19,6 +19,7 @@
 .navbar-logo {
   display: flex;
   align-items: center;
+  gap: 14px;
   text-decoration: none;
 }
 
@@ -35,6 +36,14 @@
 
 .navbar-logo:hover .logo-wordmark {
   opacity: 0.8;
+}
+
+.logo-tag {
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 /* Nav links */
@@ -253,6 +262,10 @@
 /* Mobile */
 @media (max-width: 750px) {
   .navbar-menu {
+    display: none;
+  }
+
+  .logo-tag {
     display: none;
   }
 

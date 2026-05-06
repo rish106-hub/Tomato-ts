@@ -1,14 +1,22 @@
 import React from 'react'
 import './Footer.css'
+import { useNavigate } from 'react-router-dom'
 import { assets } from '../../assets/assets'
 
 const Footer = () => {
+  const navigate = useNavigate()
+
+  const handleNavigation = (path) => {
+    navigate(path)
+    window.scrollTo(0, 0)
+  }
+
   return (
     <div className='footer' id='footer'>
       <div className="footer-content">
         <div className="footer-content-left">
-            <img src={assets.logo} alt="" />
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <span className="footer-brand-wordmark">crave</span>
+            <p>Indian comfort food for real city cravings, from biryani dinners to late-night momos and proper chaat fixes.</p>
             <div className="footer-social-icons">
                 <img src={assets.facebook_icon} alt="" />
                 <img src={assets.twitter_icon} alt="" />
@@ -16,24 +24,24 @@ const Footer = () => {
             </div>
         </div>
         <div className="footer-content-center">
-            <h2>COMPANY</h2>
+            <h2>Explore</h2>
             <ul>
-                <li>Home</li>
-                <li>About us</li>
-                <li>Delivery</li>
-                <li>Privacy policy</li>
+                <li onClick={() => handleNavigation('/')}>Home</li>
+                <li onClick={() => handleNavigation('/about')}>About us</li>
+                <li onClick={() => handleNavigation('/delivery')}>Delivery</li>
+                <li onClick={() => handleNavigation('/privacy')}>Privacy policy</li>
             </ul>
         </div>
         <div className="footer-content-right">
-            <h2>GET IN TOUCH</h2>
+            <h2>Support</h2>
             <ul>
-                <li>+91 8918596845</li>
-                <li>sayanbhatt2019@gmail.com</li>
+                <li>+91 98765 43210</li>
+                <li>hello@cravefood.in</li>
             </ul>
         </div>
       </div>
       <hr />
-      <p className="footer-copyright">Copyright 2026 © Tomato.com - All Right Reserved.</p>
+      <p className="footer-copyright">Copyright 2026 © Crave Food Delivery India. All rights reserved.</p>
     </div>
   )
 }

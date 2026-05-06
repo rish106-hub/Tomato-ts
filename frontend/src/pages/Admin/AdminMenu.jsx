@@ -3,8 +3,8 @@ import axios from 'axios'
 import { toast } from 'react-toastify'
 import { API_URL, adminHeaders } from './adminApi'
 
-const CATEGORIES = ['Salad', 'Rolls', 'Deserts', 'Sandwich', 'Cake', 'Pure Veg', 'Pasta', 'Noodles']
-const EMPTY_FORM = { name: '', description: '', price: '', category: 'Salad' }
+const CATEGORIES = ['Biryani', 'Thali', 'Rolls', 'Momos', 'Chaat', 'South Indian', 'Chinese', 'Desserts']
+const EMPTY_FORM = { name: '', description: '', price: '', category: 'Biryani' }
 
 const getImgSrc = (image) => {
     if (!image) return ''
@@ -115,7 +115,7 @@ const AdminMenu = () => {
                                 <div className="form-row">
                                     <div className="form-field">
                                         <label>Item Name *</label>
-                                        <input name="name" value={form.name} onChange={onChange} placeholder="e.g. Margherita Pizza" required />
+                                        <input name="name" value={form.name} onChange={onChange} placeholder="e.g. Lucknowi Chicken Biryani" required />
                                     </div>
                                     <div className="form-field">
                                         <label>Price (₹) *</label>

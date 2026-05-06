@@ -47,8 +47,6 @@ import food_32 from './food_32.png'
 import add_icon_white from './add_icon_white.png'
 import add_icon_green from './add_icon_green.png'
 import remove_icon_red from './remove_icon_red.png'
-import app_store from './app_store.png'
-import play_store from './play_store.png'
 import linkedin_icon from './linkedin_icon.png'
 import facebook_icon from './facebook_icon.png'
 import twitter_icon from './twitter_icon.png'
@@ -71,8 +69,6 @@ export const assets = {
     add_icon_green,
     add_icon_white,
     remove_icon_red,
-    app_store,
-    play_store,
     linkedin_icon,
     facebook_icon,
     twitter_icon,
@@ -88,267 +84,302 @@ export const assets = {
 
 export const menu_list = [
     {
-        menu_name: "Salad",
+        _id: "1",
+        menu_name: "Biryani",
         menu_image: menu_1
     },
     {
-        menu_name: "Rolls",
+        _id: "2",
+        menu_name: "Thali",
         menu_image: menu_2
     },
     {
-        menu_name: "Deserts",
+        _id: "3",
+        menu_name: "Rolls",
         menu_image: menu_3
     },
     {
-        menu_name: "Sandwich",
+        _id: "4",
+        menu_name: "Momos",
         menu_image: menu_4
     },
     {
-        menu_name: "Cake",
+        _id: "5",
+        menu_name: "Chaat",
         menu_image: menu_5
     },
     {
-        menu_name: "Pure Veg",
+        _id: "6",
+        menu_name: "South Indian",
         menu_image: menu_6
     },
     {
-        menu_name: "Pasta",
+        _id: "7",
+        menu_name: "Chinese",
         menu_image: menu_7
     },
     {
-        menu_name: "Noodles",
+        _id: "8",
+        menu_name: "Desserts",
         menu_image: menu_8
-    }]
+    }
+]
 
 export const food_list = [
     {
         _id: "1",
-        name: "Greek salad",
+        name: "Lucknowi Chicken Biryani",
         image: food_1,
-        price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Salad"
+        price: 289,
+        description: "Long-grain basmati, saffron aroma, tender chicken and a dum finish that opens up the appetite instantly.",
+        category: "Biryani"
     },
     {
         _id: "2",
-        name: "Veg salad",
+        name: "Hyderabadi Veg Biryani",
         image: food_2,
-        price: 18,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Salad"
-    }, {
+        price: 249,
+        description: "Layered rice with caramelised onions, mint and masala-seared vegetables for a full festive bite.",
+        category: "Biryani"
+    },
+    {
         _id: "3",
-        name: "Clover Salad",
+        name: "Kolkata Mutton Biryani",
         image: food_3,
-        price: 16,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Salad"
-    }, {
+        price: 349,
+        description: "Fragrant rice, slow-cooked mutton and that signature potato that makes the entire box smell irresistible.",
+        category: "Biryani"
+    },
+    {
         _id: "4",
-        name: "Chicken Salad",
+        name: "Paneer Tikka Biryani",
         image: food_4,
-        price: 24,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Salad"
-    }, {
+        price: 259,
+        description: "Smoky paneer cubes, buttery masala and fluffy rice built for rich, comforting dinner cravings.",
+        category: "Biryani"
+    },
+    {
         _id: "5",
-        name: "Lasagna Rolls",
+        name: "Roomali Chicken Kathi Roll",
         image: food_5,
-        price: 14,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 169,
+        description: "Juicy chicken, onion lachha and mint chutney wrapped hot in a soft roomali roti.",
         category: "Rolls"
-    }, {
+    },
+    {
         _id: "6",
-        name: "Peri Peri Rolls",
+        name: "Paneer Malai Roll",
         image: food_6,
-        price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 159,
+        description: "Creamy paneer filling with charred capsicum and a mellow spice finish that stays addictive.",
         category: "Rolls"
-    }, {
+    },
+    {
         _id: "7",
-        name: "Chicken Rolls",
+        name: "Egg Double Masala Roll",
         image: food_7,
-        price: 20,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 139,
+        description: "Street-style eggs, sharp onion crunch and chilli-ketchup balance for a proper evening hunger fix.",
         category: "Rolls"
-    }, {
+    },
+    {
         _id: "8",
-        name: "Veg Rolls",
+        name: "Achari Soya Chaap Roll",
         image: food_8,
-        price: 15,
-        description: "Food provides essential nutrients for overall health and well-being",
+        price: 149,
+        description: "Pickle-spiced chaap with smoked mayo and coriander for a bold North Indian wrap.",
         category: "Rolls"
-    }, {
+    },
+    {
         _id: "9",
-        name: "Ripple Ice Cream",
+        name: "Gulab Jamun Cheesecake Jar",
         image: food_9,
-        price: 14,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Deserts"
-    }, {
+        price: 129,
+        description: "Creamy cheesecake layered with gulab jamun bits for that sweet-rich finish after a spicy meal.",
+        category: "Desserts"
+    },
+    {
         _id: "10",
-        name: "Fruit Ice Cream",
+        name: "Matka Kulfi Falooda",
         image: food_10,
-        price: 22,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Deserts"
-    }, {
+        price: 149,
+        description: "Rose syrup, vermicelli and kulfi in a chilled matka that lands exactly where the craving sits.",
+        category: "Desserts"
+    },
+    {
         _id: "11",
-        name: "Jar Ice Cream",
+        name: "Hot Gajar Halwa",
         image: food_11,
-        price: 10,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Deserts"
-    }, {
+        price: 119,
+        description: "Slow-cooked carrots, khoya and nuts served warm for a dense, comforting dessert moment.",
+        category: "Desserts"
+    },
+    {
         _id: "12",
-        name: "Vanilla Ice Cream",
+        name: "Chocolate Samosa Sundae",
         image: food_12,
-        price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Deserts"
+        price: 139,
+        description: "Crunchy pastry shards, melting ice cream and chocolate drizzle for a playful desi-meets-modern treat.",
+        category: "Desserts"
     },
     {
         _id: "13",
-        name: "Chicken Sandwich",
+        name: "Rajwadi Veg Thali",
         image: food_13,
-        price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Sandwich"
+        price: 229,
+        description: "Dal, sabzi, rice, roti, pickle and a sweet course for the kind of lunch that feels complete.",
+        category: "Thali"
     },
     {
         _id: "14",
-        name: "Vegan Sandwich",
+        name: "Butter Chicken Thali",
         image: food_14,
-        price: 18,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Sandwich"
-    }, {
+        price: 279,
+        description: "Creamy butter chicken with dal, jeera rice and soft tandoori roti for full plate satisfaction.",
+        category: "Thali"
+    },
+    {
         _id: "15",
-        name: "Grilled Sandwich",
+        name: "Paneer Lababdar Thali",
         image: food_15,
-        price: 16,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Sandwich"
-    }, {
+        price: 259,
+        description: "Rich paneer gravy, pulao, dal makhani and lachha onion for indulgent weekday comfort.",
+        category: "Thali"
+    },
+    {
         _id: "16",
-        name: "Bread Sandwich",
+        name: "Homestyle Dal Chawal Meal",
         image: food_16,
-        price: 24,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Sandwich"
-    }, {
+        price: 189,
+        description: "Yellow dal, steamed rice, aloo fry and salad for simple food that still hits the craving note.",
+        category: "Thali"
+    },
+    {
         _id: "17",
-        name: "Cup Cake",
+        name: "Masala Dosa Combo",
         image: food_17,
-        price: 14,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Cake"
-    }, {
+        price: 169,
+        description: "Crisp dosa, buttery potato masala, coconut chutney and sambar with proper South Indian sharpness.",
+        category: "South Indian"
+    },
+    {
         _id: "18",
-        name: "Vegan Cake",
+        name: "Ghee Podi Idli",
         image: food_18,
-        price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Cake"
-    }, {
+        price: 129,
+        description: "Soft idlis tossed in podi and ghee for a fragrant bite that is light but impossible to stop at one.",
+        category: "South Indian"
+    },
+    {
         _id: "19",
-        name: "Butterscotch Cake",
+        name: "Mysore Uttapam",
         image: food_19,
-        price: 20,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Cake"
-    }, {
+        price: 149,
+        description: "Thick uttapam, chutney layers and roasted vegetables for a crisp-soft texture contrast.",
+        category: "South Indian"
+    },
+    {
         _id: "20",
-        name: "Sliced Cake",
+        name: "Filter Coffee Breakfast Box",
         image: food_20,
-        price: 15,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Cake"
-    }, {
+        price: 159,
+        description: "Mini idli, medu vada and a strong filter coffee pairing for mornings that need flavour fast.",
+        category: "South Indian"
+    },
+    {
         _id: "21",
-        name: "Garlic Mushroom ",
+        name: "Tandoori Chicken Momos",
         image: food_21,
-        price: 14,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pure Veg"
-    }, {
+        price: 169,
+        description: "Charred outside, juicy inside, with red chutney that sharpens every bite.",
+        category: "Momos"
+    },
+    {
         _id: "22",
-        name: "Fried Cauliflower",
+        name: "Afghani Paneer Momos",
         image: food_22,
-        price: 22,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pure Veg"
-    }, {
+        price: 159,
+        description: "Creamy coating, smoky spice and soft paneer filling built for late-night ordering.",
+        category: "Momos"
+    },
+    {
         _id: "23",
-        name: "Mix Veg Pulao",
+        name: "Kurkure Veg Momos",
         image: food_23,
-        price: 10,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pure Veg"
-    }, {
+        price: 139,
+        description: "Crunchy-fried outer shell with a peppery vegetable centre and a proper spicy dip.",
+        category: "Momos"
+    },
+    {
         _id: "24",
-        name: "Rice Zucchini",
+        name: "Jhol Momos Bowl",
         image: food_24,
-        price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pure Veg"
+        price: 149,
+        description: "Steamed momos in a soupy, chilli-forward broth that wakes up the palate immediately.",
+        category: "Momos"
     },
     {
         _id: "25",
-        name: "Cheese Pasta",
+        name: "Chilli Garlic Noodles",
         image: food_25,
-        price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pasta"
+        price: 189,
+        description: "Wok-tossed noodles with smoky chilli garlic sauce for fast, fiery comfort.",
+        category: "Chinese"
     },
     {
         _id: "26",
-        name: "Tomato Pasta",
+        name: "Paneer Manchurian Rice",
         image: food_26,
-        price: 18,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pasta"
-    }, {
+        price: 209,
+        description: "Sticky paneer bites and savoury gravy over fried rice for a big desi-Chinese craving box.",
+        category: "Chinese"
+    },
+    {
         _id: "27",
-        name: "Creamy Pasta",
+        name: "Schezwan Chicken Fried Rice",
         image: food_27,
-        price: 16,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pasta"
-    }, {
+        price: 229,
+        description: "High-heat wok flavour with spicy chicken and bold schezwan for an instant hunger trigger.",
+        category: "Chinese"
+    },
+    {
         _id: "28",
-        name: "Chicken Pasta",
+        name: "Veg Hakka Noodles Combo",
         image: food_28,
-        price: 24,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pasta"
-    }, {
+        price: 199,
+        description: "Classic hakka noodles with a side of manchurian gravy for familiar takeaway satisfaction.",
+        category: "Chinese"
+    },
+    {
         _id: "29",
-        name: "Buttter Noodles",
+        name: "Papdi Chaat Box",
         image: food_29,
-        price: 14,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Noodles"
-    }, {
+        price: 119,
+        description: "Crunch, dahi, chutneys and masala stacked for that sweet-tangy-chaotic Delhi street bite.",
+        category: "Chaat"
+    },
+    {
         _id: "30",
-        name: "Veg Noodles",
+        name: "Dahi Bhalla Deluxe",
         image: food_30,
-        price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Noodles"
-    }, {
+        price: 129,
+        description: "Soft bhallas, cold curd and tamarind hit the palate with equal comfort and drama.",
+        category: "Chaat"
+    },
+    {
         _id: "31",
-        name: "Somen Noodles",
+        name: "Aloo Tikki Chaat",
         image: food_31,
-        price: 20,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Noodles"
-    }, {
+        price: 109,
+        description: "Hot tikki, chilled dahi and layered chutneys that make the first bite feel immediate and loud.",
+        category: "Chaat"
+    },
+    {
         _id: "32",
-        name: "Cooked Noodles",
+        name: "Bhel Puri Crunch Cup",
         image: food_32,
-        price: 15,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Noodles"
+        price: 99,
+        description: "Puffed rice, sev, raw mango and chutney mix that keeps every bite fresh and snackable.",
+        category: "Chaat"
     }
 ]

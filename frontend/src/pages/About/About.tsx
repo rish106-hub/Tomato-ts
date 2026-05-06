@@ -5,57 +5,56 @@ const About: React.FC = () => {
   return (
     <div className="about-page">
       <div className="about-container">
-        <h1>About Crave</h1>
-        <div className="about-content">
-          <section className="about-section">
-            <h2>Our Story</h2>
-            <p>
-              Founded in 2024, Crave started with a simple obsession: food should arrive
-              exactly the way the chef intended it — hot, fresh, and on time. We're building
-              the food delivery platform that treats every order like it matters, because it does.
-            </p>
-          </section>
+        <section className="about-hero">
+          <p className="about-kicker">About Crave</p>
+          <h1>Made for Indian cravings that arrive suddenly and expect to be taken seriously.</h1>
+          <p className="about-lead">
+            Crave is a web-first food ordering brand shaped around how people in India actually browse for meals:
+            by mood, by dish name, by spice level, by time of day and by the comfort of familiar favourites.
+          </p>
+        </section>
 
-          <section className="about-section">
-            <h2>Our Mission</h2>
+        <section className="about-section">
+          <div className="about-section-copy">
+            <h2>What we are building</h2>
             <p>
-              To eliminate the gap between craving and satisfaction. We connect food lovers
-              with the city's finest kitchens through technology that gets out of the way —
-              fast, frictionless, and reliable every single time.
+              The focus is not generic food discovery. It is hunger-led decision making. That means clearer Indian menu labels,
+              believable INR pricing, better visual mapping between the dish and the category, and copy that sounds like food
+              people genuinely order in this market.
             </p>
-          </section>
-
-          <section className="about-section">
-            <h2>Why Choose Crave?</h2>
-            <div className="features-grid">
-              <div className="feature-item">
-                <h3>Fast Delivery</h3>
-                <p>30-minute delivery guarantee or your money back</p>
-              </div>
-              <div className="feature-item">
-                <h3>Curated Quality</h3>
-                <p>Partnered only with kitchens that meet our standards</p>
-              </div>
-              <div className="feature-item">
-                <h3>Zero Friction</h3>
-                <p>From craving to checkout in under 60 seconds</p>
-              </div>
-              <div className="feature-item">
-                <h3>24/7 Support</h3>
-                <p>Real humans, always available when you need us</p>
-              </div>
+          </div>
+          <div className="about-section-points">
+            <div className="about-point">
+              <h3>Search by craving</h3>
+              <p>Biryani, chaat, momos, rolls and thalis are treated as primary intent, not buried sub-filters.</p>
             </div>
-          </section>
+            <div className="about-point">
+              <h3>Web-first convenience</h3>
+              <p>No App Store or Play Store fiction. The full experience is available directly in the browser.</p>
+            </div>
+            <div className="about-point">
+              <h3>Food that feels local</h3>
+              <p>Language, pricing and dish mix now lean into Indian buying habits instead of imported template content.</p>
+            </div>
+          </div>
+        </section>
 
-          <section className="about-section">
-            <h2>Our Team</h2>
+        <section className="about-section about-section-split">
+          <div className="about-story-block">
+            <h2>Why the brand sounds this way</h2>
             <p>
-              We're a team of food obsessives and engineers who believe the best meal
-              is the one you didn't have to wait for. We're endlessly iterating to make
-              Crave the most satisfying food experience in the city.
+              People rarely open a food site looking for abstract benefits. They arrive already imagining aromas, textures,
+              comfort foods and reward meals. So the writing is direct, sensory and specific. It should make the next click feel easy.
             </p>
-          </section>
-        </div>
+          </div>
+          <div className="about-story-block">
+            <h2>What stays consistent</h2>
+            <p>
+              The brand keeps its dark, warm palette and editorial typography, but the messaging is tighter across every page:
+              same tone, same market, same promise, and no placeholder claims that break trust.
+            </p>
+          </div>
+        </section>
       </div>
     </div>
   );

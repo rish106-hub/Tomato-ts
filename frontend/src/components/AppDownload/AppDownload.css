@@ -21,22 +21,8 @@
   font-style: italic;
 }
 
-.app-download-platforms {
-  display: flex;
-  justify-content: center;
-  gap: max(2vw, 16px);
-}
-
-.app-download-platforms img {
-  width: max(28vw, 120px);
-  max-width: 180px;
-  border-radius: var(--radius-md);
-  cursor: pointer;
-  opacity: 0.85;
-  transition: transform var(--duration-base) var(--ease-out), opacity var(--duration-base);
-}
-
-.app-download-platforms img:hover {
-  transform: translateY(-4px);
-  opacity: 1;
+.app-download-note {
+  color: var(--text-secondary);
+  font-size: var(--text-base);
+  line-height: 1.7;
 }

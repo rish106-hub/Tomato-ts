@@ -38,8 +38,6 @@ import food_30 from './food_30.png';
 import food_31 from './food_31.png';
 import food_32 from './food_32.png';
 import add_icon_white from './add_icon_white.png';
-import app_store from './app_store.png';
-import play_store from './play_store.png';
 import bag_icon from './bag_icon.png';
 import cross_icon from './cross_icon.png';
 import un_checked from './un_checked.png';
@@ -58,48 +56,17 @@ import header_img from './header_img.png';
 import linkedin_icon from './linkedin_icon.png';
 import twitter_icon from './twitter_icon.png';
 import facebook_icon from './facebook_icon.png';
+import parcel_icon from './parcel_icon.png';
 
 export const menu_list = [
-    {
-        _id: "1",
-        menu_name: "Biryani",
-        menu_image: menu_1
-    },
-    {
-        _id: "2",
-        menu_name: "Rolls",
-        menu_image: menu_2
-    },
-    {
-        _id: "3",
-        menu_name: "Desserts",
-        menu_image: menu_3
-    },
-    {
-        _id: "4",
-        menu_name: "Thali",
-        menu_image: menu_4
-    },
-    {
-        _id: "5",
-        menu_name: "South Indian",
-        menu_image: menu_5
-    },
-    {
-        _id: "6",
-        menu_name: "Momos",
-        menu_image: menu_6
-    },
-    {
-        _id: "7",
-        menu_name: "Chinese",
-        menu_image: menu_7
-    },
-    {
-        _id: "8",
-        menu_name: "Chaat",
-        menu_image: menu_8
-    }
+    { _id: "1", menu_name: "Biryani", menu_image: menu_1 },
+    { _id: "2", menu_name: "Thali", menu_image: menu_2 },
+    { _id: "3", menu_name: "Rolls", menu_image: menu_3 },
+    { _id: "4", menu_name: "Momos", menu_image: menu_4 },
+    { _id: "5", menu_name: "Chaat", menu_image: menu_5 },
+    { _id: "6", menu_name: "South Indian", menu_image: menu_6 },
+    { _id: "7", menu_name: "Chinese", menu_image: menu_7 },
+    { _id: "8", menu_name: "Desserts", menu_image: menu_8 }
 ];
 
 export const assets = {
@@ -143,8 +110,6 @@ export const assets = {
     food_31,
     food_32,
     add_icon_white,
-    app_store,
-    play_store,
     bag_icon,
     cross_icon,
     un_checked,
@@ -162,5 +127,6 @@ export const assets = {
     header_img,
     linkedin_icon,
     twitter_icon,
-    facebook_icon
+    facebook_icon,
+    parcel_icon
 };

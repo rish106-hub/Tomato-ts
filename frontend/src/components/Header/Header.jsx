@@ -10,34 +10,34 @@ const Header = () => {
       </div>
 
       <div className='header-contents'>
-        <p className='header-eyebrow'>2 lakh+ Delhiites order with us every week</p>
+        <p className='header-eyebrow'>Freshly cooked Indian comfort for Delhi NCR</p>
         <h1 className='header-headline'>
-          Delhi's hunger,<br />
-          <em>answered in 30.</em>
+          When the craving hits,<br />
+          <em>send for something worth smelling.</em>
         </h1>
         <p className='header-subtext'>
-          Dal Makhani from CP. Momos from Lajpat Nagar. Biryani
-          from Chandni Chowk — still garam, straight to your door.
+          Dum biryani, butter-loaded rolls, podi idlis, fiery momos and chaat that actually feels like evening in India.
+          Hot, bold, familiar and built for people who know exactly what they want to eat.
         </p>
         <div className='header-stats'>
           <div className='stat'>
-            <span className='stat-number'>30</span>
-            <span className='stat-label'>min avg delivery</span>
+            <span className='stat-number'>Hot</span>
+            <span className='stat-label'>served for fast cravings</span>
           </div>
           <div className='stat-divider'></div>
           <div className='stat'>
-            <span className='stat-number'>500+</span>
-            <span className='stat-label'>restaurants in NCR</span>
+            <span className='stat-number'>8</span>
+            <span className='stat-label'>high-craving Indian menus</span>
           </div>
           <div className='stat-divider'></div>
           <div className='stat'>
-            <span className='stat-number'>₹0</span>
-            <span className='stat-label'>delivery above ₹499</span>
+            <span className='stat-number'>INR</span>
+            <span className='stat-label'>pricing built for India</span>
           </div>
         </div>
         <div className='header-actions'>
-          <a href='#explore-menu' className='header-btn-primary'>Order Now</a>
-          <a href='#food-display' className='header-btn-secondary'>Browse Menu</a>
+          <a href='#food-display' className='header-btn-primary'>Start Ordering</a>
+          <a href='#explore-menu' className='header-btn-secondary'>Pick Your Mood</a>
         </div>
       </div>
 

@@ -5,12 +5,33 @@
   gap: 24px;
 }
 
+.explore-menu-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 780px;
+}
+
+.explore-menu-kicker {
+  color: var(--accent-hot);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .explore-menu-title {
   font-family: var(--font-display);
   font-size: var(--text-3xl);
   font-weight: 600;
   color: var(--text-primary);
   letter-spacing: -0.01em;
+}
+
+.explore-menu-copy {
+  color: var(--text-secondary);
+  font-size: var(--text-base);
+  line-height: 1.8;
 }
 
 .explore-menu-list {

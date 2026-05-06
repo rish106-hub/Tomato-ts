@@ -91,15 +91,15 @@ const Privacy: React.FC = () => {
               For any questions, concerns, or data-related requests, reach us at:
             </p>
             <ul>
-              <li>Email: <strong>rishavdewan10@gmail.com</strong></li>
+              <li>Email: <strong>hello@cravefood.in</strong></li>
               <li>Phone: +91 98765 43210</li>
               <li>Address: Crave Technologies, New Delhi — 110001, India</li>
             </ul>
           </section>
 
           <div className="policy-footer">
-            <p><strong>Last Updated:</strong> 6 May 2025</p>
-            <p><strong>Effective Date:</strong> 6 May 2025</p>
+            <p><strong>Last Updated:</strong> 6 May 2026</p>
+            <p><strong>Effective Date:</strong> 6 May 2026</p>
           </div>
         </div>
       </div>
