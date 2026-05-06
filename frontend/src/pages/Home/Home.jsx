@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import Header from '../../components/Header/Header'
+import RestaurantShowcase from '../../components/RestaurantShowcase/RestaurantShowcase'
 import ExploreMenu from '../../components/ExploreMenu/ExploreMenu'
 import FoodDisplay from '../../components/FoodDisplay/FoodDisplay'
 import AppDownload from '../../components/AppDownload/AppDownload'
@@ -23,6 +24,7 @@ const Home = () => {
   return (
     <>
       <Header/>
+      <RestaurantShowcase limit={4} />
       <ExploreMenu setCategory={setCategory} category={category}/>
       <FoodDisplay category={category}/>
       <AppDownload/>

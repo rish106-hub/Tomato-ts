@@ -4,7 +4,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,66 +15,58 @@
 }
 
 .food-item-modal {
-  background: white;
-  border-radius: 12px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-mid);
+  border-radius: var(--radius-xl);
   max-width: 600px;
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  animation: modalSlideIn 0.3s ease-out;
-}
-
-@keyframes modalSlideIn {
-  from {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  box-shadow: var(--shadow-modal);
+  animation: scaleIn 0.3s var(--ease-out) both;
+  color: var(--text-primary);
 }
 
 .modal-header {
   display: flex;
   justify-content: flex-end;
-  padding: 15px 20px 0;
+  padding: 16px 20px 0;
 }
 
 .close-btn {
-  background: none;
-  border: none;
-  font-size: 28px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  font-size: 22px;
   cursor: pointer;
-  color: #666;
+  color: var(--text-secondary);
   padding: 0;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  transition: all 0.3s ease;
+  transition: background var(--duration-fast), color var(--duration-fast);
+  font-family: var(--font-body);
 }
 
 .close-btn:hover {
-  background-color: #f0f0f0;
-  color: #333;
+  background: var(--bg-primary);
+  color: var(--text-primary);
 }
 
 .modal-content {
   display: flex;
   flex-direction: column;
-  padding: 0 20px 20px;
+  padding: 0 24px 24px;
 }
 
 .modal-image {
   width: 100%;
   height: 250px;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: var(--radius-lg);
   margin-bottom: 20px;
 }
 
@@ -85,207 +79,257 @@
 .modal-details {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 14px;
 }
 
 .modal-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .modal-title h2 {
   margin: 0;
-  font-size: 24px;
-  color: #333;
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  color: var(--text-primary);
   font-weight: 600;
 }
 
 .modal-rating img {
-  width: 80px;
-  height: auto;
+  width: 70px;
+  filter: brightness(0.8) sepia(1) saturate(3) hue-rotate(10deg);
 }
 
 .modal-description {
-  color: #666;
-  line-height: 1.6;
-  margin: 10px 0;
-  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  font-size: var(--text-sm);
 }
 
 .modal-category {
-  color: #888;
-  font-size: 13px;
-  margin: 5px 0;
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.modal-restaurant-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: var(--text-secondary);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.modal-popularity {
+  color: var(--accent-hot);
+  font-size: var(--text-sm);
+  font-weight: 600;
 }
 
 .modal-price {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 15px 0;
+  margin: 8px 0;
 }
 
 .price-label {
   font-weight: 500;
-  color: #555;
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
 }
 
 .price-value {
-  font-size: 20px;
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
   font-weight: 600;
-  color: #FF4C24;
+  color: var(--accent-warm);
 }
 
 .modal-quantity {
   display: flex;
   align-items: center;
-  gap: 15px;
-  margin: 15px 0;
+  gap: 16px;
+  margin: 8px 0;
 }
 
 .quantity-label {
   font-weight: 500;
-  color: #555;
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
   min-width: 70px;
 }
 
 .quantity-selector {
   display: flex;
   align-items: center;
-  gap: 15px;
-  background: #f8f8f8;
-  border-radius: 25px;
-  padding: 5px;
+  gap: 14px;
+  background: var(--bg-elevated);
+  border-radius: var(--radius-pill);
+  padding: 5px 8px;
 }
 
 .quantity-btn {
   width: 32px;
   height: 32px;
-  border: none;
-  background: #fff;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
   border-radius: 50%;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+  font-size: var(--text-base);
   font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  transition: background var(--duration-base), border-color var(--duration-base), color var(--duration-base);
 }
 
 .quantity-btn:hover:not(:disabled) {
-  background: #FF4C24;
-  color: white;
+  background: var(--accent-warm);
+  border-color: var(--accent-warm);
+  color: var(--bg-primary);
 }
 
 .quantity-btn:disabled {
-  opacity: 0.5;
+  opacity: 0.4;
   cursor: not-allowed;
 }
 
 .quantity-value {
-  font-size: 18px;
+  font-size: var(--text-base);
   font-weight: 600;
-  min-width: 30px;
+  min-width: 28px;
   text-align: center;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .modal-total {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 15px 0;
-  padding: 15px 0;
-  border-top: 1px solid #eee;
+  margin: 12px 0;
+  padding: 16px 0;
+  border-top: 1px solid var(--border-subtle);
 }
 
 .total-label {
   font-weight: 500;
-  color: #555;
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
 }
 
 .total-value {
-  font-size: 22px;
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
   font-weight: 600;
-  color: #FF4C24;
+  color: var(--accent-warm);
 }
 
 .modal-actions {
   display: flex;
-  gap: 15px;
-  margin-top: 20px;
+  gap: 12px;
+  margin-top: 16px;
 }
 
-.add-to-cart-btn, .order-now-btn {
-  flex: 1;
-  padding: 15px 20px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
+.modal-feedback {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.modal-feedback h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  margin-bottom: 12px;
+}
+
+.modal-feedback-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  margin-bottom: 10px;
+}
+
+.modal-feedback-card p {
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.modal-feedback-card span {
+  color: var(--accent-warm);
+  font-size: 12px;
   font-weight: 600;
+}
+
+.add-to-cart-btn,
+.order-now-btn {
+  flex: 1;
+  padding: 14px 20px;
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: 700;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all var(--duration-base) var(--ease-out);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.06em;
+  font-family: var(--font-body);
 }
 
 .add-to-cart-btn {
-  background: #fff;
-  color: #FF4C24;
-  border: 2px solid #FF4C24;
+  background: transparent;
+  color: var(--accent-warm);
+  border: 1.5px solid var(--accent-warm);
 }
 
 .add-to-cart-btn:hover {
-  background: #FF4C24;
-  color: white;
+  background: var(--accent-warm);
+  color: var(--bg-primary);
 }
 
 .order-now-btn {
-  background: #FF4C24;
-  color: white;
+  background: var(--accent-hot);
+  color: var(--text-primary);
+  border: none;
 }
 
 .order-now-btn:hover {
-  background: #e63d1a;
+  background: #D44B22;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 76, 36, 0.3);
+  box-shadow: 0 6px 20px rgba(240, 88, 42, 0.4);
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
   .food-item-modal {
-    margin: 10px;
     max-height: 95vh;
   }
-  
+
   .modal-content {
-    padding: 0 15px 15px;
+    padding: 0 16px 16px;
   }
-  
+
   .modal-image {
     height: 200px;
   }
-  
+
   .modal-title {
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    gap: 8px;
   }
-  
-  .modal-title h2 {
-    font-size: 20px;
-  }
-  
+
   .modal-actions {
     flex-direction: column;
-  }
-  
-  .add-to-cart-btn, .order-now-btn {
-    width: 100%;
   }
 }
 
@@ -293,13 +337,13 @@
   .food-item-modal-overlay {
     padding: 10px;
   }
-  
+
   .modal-quantity {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
   }
-  
+
   .quantity-label {
     min-width: auto;
   }
