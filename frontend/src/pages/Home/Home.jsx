@@ -3,7 +3,6 @@ import { useLocation } from 'react-router-dom'
 import Header from '../../components/Header/Header'
 import ExploreMenu from '../../components/ExploreMenu/ExploreMenu'
 import FoodDisplay from '../../components/FoodDisplay/FoodDisplay'
-import AppDownload from '../../components/AppDownload/AppDownload'
 import { sectionRoutes } from '../../utils/sectionRoutes'
 
 const Home = () => {
@@ -25,7 +24,6 @@ const Home = () => {
       <Header/>
       <ExploreMenu setCategory={setCategory} category={category}/>
       <FoodDisplay category={category}/>
-      <AppDownload/>
     </>
   )
 }
