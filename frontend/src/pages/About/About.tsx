@@ -7,11 +7,8 @@ const About: React.FC = () => {
       <div className="about-container">
         <section className="about-hero">
           <p className="about-kicker">About Crave</p>
-          <h1>Made for Indian cravings that arrive suddenly and expect to be taken seriously.</h1>
-          <p className="about-lead">
-            Crave is a web-first food ordering brand shaped around how people in India actually browse for meals:
-            by mood, by dish name, by spice level, by time of day and by the comfort of familiar favourites.
-          </p>
+          <h1>Built For NCR Cravings.</h1>
+          <p className="about-lead">Local menus, sharper hunger-led ordering journeys.</p>
         </section>
 
         <section className="about-section">

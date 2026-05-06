@@ -7,11 +7,8 @@ const Delivery: React.FC = () => {
       <div className="delivery-container">
         <section className="delivery-hero">
           <p className="delivery-kicker">Delivery</p>
-          <h1>Warm food, realistic ETAs and fewer trust-breaking promises.</h1>
-          <p className="delivery-lead">
-            Crave is tuned for Delhi NCR ordering patterns: office lunches, late evening snacks, family dinners and quick comfort orders
-            that need clean delivery communication instead of vague timelines.
-          </p>
+          <h1>Delivery That Feels Local.</h1>
+          <p className="delivery-lead">Clear ETAs for Delhi NCR orders.</p>
         </section>
 
         <section className="delivery-section">
