@@ -24,7 +24,6 @@ const userSchema = new mongoose.Schema({
     loginCount:    { type: Number, default: 0 },
 }, { minimize: false, timestamps: true });
 
-userSchema.index({ email: 1 });
 userSchema.index({ role: 1, isActive: 1 });
 
 const userModel = mongoose.models.user || mongoose.model("user", userSchema);
