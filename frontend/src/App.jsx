@@ -14,6 +14,8 @@ import About from './pages/About/About'
 import Delivery from './pages/Delivery/Delivery'
 import Privacy from './pages/Privacy/Privacy'
 import AdminApp from './pages/Admin/AdminApp'
+import Restaurants from './pages/Restaurants/Restaurants'
+import RestaurantDetail from './pages/RestaurantDetail/RestaurantDetail'
 
 const CustomerApp = () => {
   const [showLogin, setShowLogin] = useState(false)
@@ -30,6 +32,8 @@ const CustomerApp = () => {
           <Route path='/myorders' element={<MyOrders />} />
           <Route path='/verify'   element={<Verify />} />
           <Route path='/menu'     element={<Home />} />
+          <Route path='/restaurants' element={<Restaurants />} />
+          <Route path='/restaurants/:slug' element={<RestaurantDetail />} />
           <Route path='/about'    element={<About />} />
           <Route path='/delivery' element={<Delivery />} />
           <Route path='/privacy'  element={<Privacy />} />

@@ -14,6 +14,11 @@ interface FoodItemModalProps {
     description: string
     image: string
     category: string
+    restaurantName?: string
+    restaurantRating?: number
+    restaurantArea?: string
+    popularityTag?: string
+    feedback?: { name: string; text: string }[]
   }
   onClose: () => void
 }
@@ -71,6 +76,12 @@ const FoodItemModal: React.FC<FoodItemModalProps> = ({ item, onClose }) => {
             
             <p className="modal-description">{item.description}</p>
             <p className="modal-category">Category: {item.category}</p>
+            <div className="modal-restaurant-strip">
+              <span>{item.restaurantName}</span>
+              {item.restaurantRating ? <span>{item.restaurantRating} rating</span> : null}
+              {item.restaurantArea ? <span>{item.restaurantArea}</span> : null}
+            </div>
+            {item.popularityTag ? <p className="modal-popularity">{item.popularityTag}</p> : null}
             
             <div className="modal-price">
               <span className="price-label">Price:</span>
@@ -107,6 +118,17 @@ const FoodItemModal: React.FC<FoodItemModalProps> = ({ item, onClose }) => {
                 Order Now
               </button>
             </div>
+            {item.feedback?.length ? (
+              <div className="modal-feedback">
+                <h3>Diner feedback</h3>
+                {item.feedback.slice(0, 2).map((entry) => (
+                  <article key={entry.name} className="modal-feedback-card">
+                    <p>{entry.text}</p>
+                    <span>{entry.name}</span>
+                  </article>
+                ))}
+              </div>
+            ) : null}
           </div>
         </div>
       </div>

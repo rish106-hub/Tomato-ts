@@ -22,7 +22,20 @@ const FoodDisplay = ({category}) => {
       <div className='food-display-list'>
         {visibleItems.length > 0 ? (
           visibleItems.map((item)=>(
-            <FoodItem key={item._id} image={item.image} name={item.name} desc={item.description} price={item.price} id={item._id} category={item.category}/>
+            <FoodItem
+              key={item._id}
+              image={item.image}
+              name={item.name}
+              desc={item.description}
+              price={item.price}
+              id={item._id}
+              category={item.category}
+              restaurantName={item.restaurantName}
+              restaurantRating={item.restaurantRating}
+              restaurantArea={item.restaurantArea}
+              popularityTag={item.popularityTag}
+              feedback={item.feedback}
+            />
           ))
         ) : (
           <div className="no-results">

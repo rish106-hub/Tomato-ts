@@ -6,7 +6,7 @@ import FoodItemModal from '../FoodItemModal/FoodItemModal';
 import getImageUrl from '../../utils/imageUrl';
 import formatPrice from '../../utils/formatPrice';
 
-const FoodItem = ({ image, name, price, desc , id, category }) => {
+const FoodItem = ({ image, name, price, desc , id, category, restaurantName, restaurantRating, restaurantArea, popularityTag, feedback }) => {
 
     const [itemCount, setItemCount] = useState(0);
     const [showModal, setShowModal] = useState(false);
@@ -31,7 +31,12 @@ const FoodItem = ({ image, name, price, desc , id, category }) => {
         price: price,
         description: desc,
         image: image,
-        category: category || 'Food'
+        category: category || 'Food',
+        restaurantName,
+        restaurantRating,
+        restaurantArea,
+        popularityTag,
+        feedback
     };
 
     return (
@@ -50,10 +55,15 @@ const FoodItem = ({ image, name, price, desc , id, category }) => {
                 </div>
                 <div className="food-item-info">
                     <p className="food-item-category">{category}</p>
+                    <div className="food-item-restaurant">
+                        <span>{restaurantName}</span>
+                        {restaurantRating ? <span>{restaurantRating} rating</span> : null}
+                    </div>
                     <div className="food-item-name-rating">
                         <p>{name}</p> <img src={assets.rating_starts} alt="" />
                     </div>
                     <p className="food-item-desc">{desc}</p>
+                    <p className="food-item-meta">{restaurantArea} • {popularityTag}</p>
                     <p className="food-item-price">{formatPrice(price, currency)}</p>
                 </div>
             </div>
