@@ -25,6 +25,7 @@ const Navbar = ({ setShowLogin }) => {
       <ul className="navbar-menu">
         <Link to="/" onClick={() => setMenu("home")} className={menu === "home" ? "active" : ""}>home</Link>
         <Link to='/menu' onClick={() => setMenu("menu")} className={menu === "menu" ? "active" : ""}>menu</Link>
+        <Link to='/restaurants' onClick={() => setMenu("restaurants")} className={menu === "restaurants" ? "active" : ""}>restaurants</Link>
         <Link to='/about' onClick={() => setMenu("about")} className={menu === "about" ? "active" : ""}>about</Link>
         <Link to='/delivery' onClick={() => setMenu("delivery")} className={menu === "delivery" ? "active" : ""}>delivery</Link>
       </ul>
@@ -34,7 +35,7 @@ const Navbar = ({ setShowLogin }) => {
           <img src={assets.search_icon} alt="" aria-hidden="true" className="search-icon" />
           <input
             type="text"
-            placeholder="Search food..."
+            placeholder="Search restaurants, biryani, momos..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="search-input"
