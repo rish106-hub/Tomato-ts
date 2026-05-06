@@ -20,10 +20,10 @@ const Navbar = ({ setShowLogin }) => {
     <div className='navbar'>
       <Link to='/'><img className='logo' src={assets.logo} alt="" /></Link>
       <ul className="navbar-menu">
-        <Link to="/" onClick={() => setMenu("home")} className={`${menu === "home" ? "active" : ""}`}>home</Link>
-        <Link to='/menu' onClick={() => setMenu("menu")} className={`${menu === "menu" ? "active" : ""}`}>menu</Link>
-        <Link to='/mobile-app' onClick={() => setMenu("mob-app")} className={`${menu === "mob-app" ? "active" : ""}`}>mobile app</Link>
-        <Link to='/contact-us' onClick={() => setMenu("contact")} className={`${menu === "contact" ? "active" : ""}`}>contact us</Link>
+        <Link to="/" onClick={() => setMenu("home")} className={`${menu === "home" ? "active" : ""}`}>Home</Link>
+        <Link to='/menu' onClick={() => setMenu("menu")} className={`${menu === "menu" ? "active" : ""}`}>Menu</Link>
+        <Link to='/mobile-app' onClick={() => setMenu("mob-app")} className={`${menu === "mob-app" ? "active" : ""}`}>Mobile app</Link>
+        <Link to='/contact-us' onClick={() => setMenu("contact")} className={`${menu === "contact" ? "active" : ""}`}>Contact us</Link>
       </ul>
       <div className="navbar-right">
         <div className="navbar-search">
@@ -44,7 +44,7 @@ const Navbar = ({ setShowLogin }) => {
           <ul>
           </ul>
         </div>
-        {!token ? <button onClick={() => setShowLogin(true)}>sign in</button>
+        {!token ? <button onClick={() => setShowLogin(true)}>Sign in</button>
           : <div className='navbar-profile'>
             <img src={assets.profile_icon} alt="" />
             <ul className='navbar-profile-dropdown'>
