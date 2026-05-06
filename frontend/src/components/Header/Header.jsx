@@ -11,14 +11,8 @@ const Header = () => {
 
       <div className='header-contents'>
         <p className='header-eyebrow'>Freshly cooked Indian comfort for Delhi NCR</p>
-        <h1 className='header-headline'>
-          Delhi NCR cravings,<br />
-          <em>answered while the food is still calling your name.</em>
-        </h1>
-        <p className='header-subtext'>
-          Dum biryani for Noida nights, butter-loaded rolls for Gurgaon hunger, fiery momos for Delhi evenings
-          and chaat that feels straight out of a market-side stall. Hot, bold and built for NCR appetites.
-        </p>
+        <h1 className='header-headline'>Delhi NCR Eats Hard.</h1>
+        <p className='header-subtext'>Hot cravings solved across NCR tonight.</p>
         <div className='header-stats'>
           <div className='stat'>
             <span className='stat-number'>Hot</span>
