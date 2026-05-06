@@ -8,7 +8,7 @@ import { toast } from 'react-toastify'
 const LoginPopup = ({ setShowLogin }) => {
 
     const { setToken, url,loadCartData } = useContext(StoreContext)
-    const [currState, setCurrState] = useState("Sign Up");
+    const [currState, setCurrState] = useState("Sign In / Sign Up");
 
     const [data, setData] = useState({
         name: "",
@@ -62,7 +62,7 @@ const LoginPopup = ({ setShowLogin }) => {
                 </div>
                 {currState === "Login"
                     ? <p>Create a new account? <span onClick={() => setCurrState('Sign Up')}>Click here</span></p>
-                    : <p>Already have an account? <span onClick={() => setCurrState('Login')}>Login here</span></p>
+                    : <p>Already have an account? <span onClick={() => setCurrState('Sign in')}>Login here</span></p>
                 }
             </form>
         </div>
