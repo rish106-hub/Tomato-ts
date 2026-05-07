@@ -25,7 +25,8 @@ const RestaurantSidebar = ({ restaurant, onClose }) => {
         `${url}/api/review/get?targetType=restaurant&targetId=${restaurant._id}`
       )
       if (response.data.success) {
-        setReviews(response.data.reviews || [])
+        const reviews = response.data.reviews || response.data.data || []
+        setReviews(reviews)
       }
     } catch (error) {
       console.error('Failed to fetch reviews:', error)

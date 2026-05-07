@@ -19,8 +19,8 @@ const getReviews = async (req, res) => {
       .populate('userId', 'name')
       .sort({ createdAt: -1 })
       .lean();
-    
-    res.json({ success: true, data: reviews });
+
+    res.json({ success: true, reviews, data: reviews });
   } catch (error) {
     console.error(error);
     res.json({ success: false, message: "Error fetching reviews" });

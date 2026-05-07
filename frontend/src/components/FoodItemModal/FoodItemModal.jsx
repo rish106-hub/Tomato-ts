@@ -36,7 +36,8 @@ const FoodItemModal = ({ item, onClose }) => {
     try {
       const response = await axios.get(`${url}/api/review/restaurants-by-food/${item._id}`)
       if (response.data.success) {
-        setRestaurants(response.data.restaurants || [])
+        const restaurants = response.data.restaurants || response.data.data || []
+        setRestaurants(restaurants)
       }
     } catch (error) {
       console.error('Failed to fetch restaurants:', error)
