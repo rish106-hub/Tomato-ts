@@ -16,7 +16,7 @@ const RestaurantSidebar = ({ restaurant, onClose }) => {
 
   useEffect(() => {
     fetchRestaurantReviews()
-  }, [restaurant._id])
+  }, [restaurant._id, url])
 
   const fetchRestaurantReviews = async () => {
     setLoadingReviews(true)
@@ -65,6 +65,8 @@ const RestaurantSidebar = ({ restaurant, onClose }) => {
         setShowReviewForm(false)
         await fetchRestaurantReviews()
         alert('Review submitted successfully!')
+      } else {
+        alert(response.data.message || 'Failed to submit review')
       }
     } catch (error) {
       console.error('Failed to submit review:', error)

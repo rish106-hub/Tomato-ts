@@ -27,15 +27,6 @@ const reviewSchema = new mongoose.Schema({
   comment: {
     type: String,
     maxlength: 500
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now,
-    index: true
-  },
-  updatedAt: {
-    type: Date,
-    default: Date.now
   }
 }, { timestamps: true });
 

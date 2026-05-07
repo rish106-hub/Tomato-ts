@@ -31,7 +31,7 @@ const getReviews = async (req, res) => {
 const addReview = async (req, res) => {
   try {
     const { targetType, targetId, rating, comment } = req.body;
-    const userId = req.body.userId || req.headers.token;
+    const userId = req.body.userId;
     
     if (!userId || !targetType || !targetId || !rating) {
       return res.json({ success: false, message: "Missing required fields" });
@@ -50,9 +50,8 @@ const addReview = async (req, res) => {
     
     if (existing) {
       // Update existing review
-      existing.rating = rating;
+      existing.rating = Number(rating);
       existing.comment = comment || '';
-      existing.updatedAt = Date.now();
       await existing.save();
       return res.json({ success: true, message: "Review updated", data: existing });
     }
@@ -62,7 +61,7 @@ const addReview = async (req, res) => {
       userId,
       targetType,
       targetId,
-      rating,
+      rating: Number(rating),
       comment: comment || ''
     });
     
@@ -94,6 +93,9 @@ const getRestaurantsByFood = async (req, res) => {
     } else {
       // Try to find food by index-based matching
       const allFoods = await foodModel.find().lean();
+      if (allFoods.length === 0) {
+        return res.json({ success: true, restaurants: [] });
+      }
       const numericId = parseInt(foodId);
       if (!isNaN(numericId) && numericId > 0) {
         const idx = (numericId - 1) % allFoods.length;

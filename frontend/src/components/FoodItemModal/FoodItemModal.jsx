@@ -29,7 +29,7 @@ const FoodItemModal = ({ item, onClose }) => {
 
   useEffect(() => {
     fetchRestaurants()
-  }, [item._id])
+  }, [item._id, url])
 
   const fetchRestaurants = async () => {
     setLoading(true)
@@ -95,6 +95,8 @@ const FoodItemModal = ({ item, onClose }) => {
         setReviewRating(5)
         setShowReviewForm(false)
         alert('Review submitted successfully!')
+      } else {
+        alert(response.data.message || 'Failed to submit review')
       }
     } catch (error) {
       console.error('Failed to submit review:', error)
