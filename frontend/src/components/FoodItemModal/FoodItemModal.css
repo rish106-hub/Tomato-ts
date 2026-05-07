@@ -272,7 +272,10 @@
 }
 
 .add-to-cart-btn,
-.order-now-btn {
+.order-now-btn,
+.write-review-btn,
+.submit-review-btn,
+.cancel-review-btn {
   flex: 1;
   padding: 14px 20px;
   border-radius: var(--radius-md);
@@ -306,6 +309,191 @@
   background: #D44B22;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(240, 88, 42, 0.4);
+}
+
+.write-review-btn {
+  background: var(--bg-elevated);
+  color: var(--accent-warm);
+  border: 1px solid var(--border-subtle);
+  width: 100%;
+  flex: none;
+  margin-top: 12px;
+}
+
+.write-review-btn:hover {
+  background: var(--bg-primary);
+  border-color: var(--accent-warm);
+}
+
+.review-form {
+  margin-top: 20px;
+  padding: 16px;
+  background: var(--bg-elevated);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+}
+
+.review-form h3 {
+  margin: 0 0 16px;
+  font-size: var(--text-lg);
+  color: var(--text-primary);
+}
+
+.review-rating,
+.review-comment {
+  margin-bottom: 16px;
+}
+
+.review-rating label,
+.review-comment label {
+  display: block;
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+  margin-bottom: 8px;
+}
+
+.review-rating select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+.review-rating select:focus {
+  outline: none;
+  border-color: var(--accent-warm);
+}
+
+.review-comment textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  resize: vertical;
+  min-height: 80px;
+}
+
+.review-comment textarea:focus {
+  outline: none;
+  border-color: var(--accent-warm);
+}
+
+.review-comment small {
+  display: block;
+  margin-top: 4px;
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+}
+
+.review-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.submit-review-btn {
+  background: var(--accent-warm);
+  color: white;
+  border: none;
+  flex: 1;
+}
+
+.submit-review-btn:hover:not(:disabled) {
+  background: #E8651A;
+  transform: translateY(-2px);
+}
+
+.submit-review-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cancel-review-btn {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+  flex: 1;
+}
+
+.cancel-review-btn:hover {
+  background: var(--bg-surface);
+}
+
+.modal-restaurants {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.modal-restaurants h3 {
+  margin: 0 0 16px;
+  font-size: var(--text-lg);
+  color: var(--text-primary);
+}
+
+.restaurants-list {
+  display: grid;
+  gap: 12px;
+}
+
+.restaurant-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  cursor: pointer;
+  transition: all var(--duration-base) var(--ease-out);
+}
+
+.restaurant-card:hover {
+  border-color: var(--accent-warm);
+  background: var(--bg-surface);
+  transform: translateX(4px);
+}
+
+.restaurant-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.restaurant-card-header h4 {
+  margin: 0;
+  font-size: var(--text-base);
+  color: var(--text-primary);
+}
+
+.restaurant-card .rating {
+  color: var(--accent-warm);
+  font-weight: 600;
+  font-size: var(--text-sm);
+}
+
+.restaurant-card .area {
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+  margin: 4px 0;
+}
+
+.restaurant-card .price {
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+  margin: 4px 0 0;
+}
+
+.loading-text {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 16px;
 }
 
 /* Responsive */
