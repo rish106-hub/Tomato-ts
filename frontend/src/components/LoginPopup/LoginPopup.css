@@ -127,3 +127,14 @@
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+@media (max-width: 480px) {
+  .login-popup-container {
+    padding: 24px 20px;
+    gap: 18px;
+  }
+
+  .login-popup-title h2 {
+    font-size: var(--text-2xl);
+  }
+}

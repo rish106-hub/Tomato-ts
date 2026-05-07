@@ -206,3 +206,27 @@
     font-size: 10px;
   }
 }
+
+@media (max-width: 480px) {
+  .cart {
+    margin: 40px 0 80px;
+  }
+
+  .cart-items-title:not(.cart-items-item) {
+    display: none;
+  }
+
+  .cart-items-title.cart-items-item {
+    grid-template-columns: 56px 1fr auto auto;
+    gap: 10px;
+  }
+
+  .cart-bottom {
+    margin-top: 32px;
+    gap: 24px;
+  }
+
+  .cart-total button {
+    width: 100%;
+  }
+}

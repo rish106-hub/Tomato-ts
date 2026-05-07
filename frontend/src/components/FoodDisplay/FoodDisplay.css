@@ -52,3 +52,32 @@
   font-weight: 600;
   color: var(--text-primary);
 }
+
+@media (max-width: 768px) {
+  .food-display {
+    margin-top: 12px;
+    margin-bottom: 40px;
+  }
+
+  .food-display-title {
+    font-size: var(--text-2xl);
+  }
+
+  .food-display-list {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    row-gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .food-display-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    row-gap: 16px;
+  }
+
+  .food-display-title {
+    font-size: var(--text-xl);
+  }
+}

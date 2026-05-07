@@ -65,3 +65,26 @@
   background: var(--border-subtle);
   margin-top: 8px;
 }
+
+@media (max-width: 768px) {
+  .explore-menu {
+    margin: 40px 0 28px;
+    gap: 18px;
+  }
+
+  .explore-menu-title {
+    font-size: var(--text-2xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .explore-menu {
+    margin: 28px 0 20px;
+    gap: 14px;
+  }
+
+  .explore-menu-chip {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
