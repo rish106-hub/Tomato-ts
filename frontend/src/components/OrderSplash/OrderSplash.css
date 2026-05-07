@@ -1,0 +1,112 @@
+.order-splash {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  background: rgba(8, 7, 6, 0.96);
+  animation: splashFadeIn 0.35s ease both;
+  cursor: none;
+}
+
+.splash-scene {
+  position: relative;
+  width: 340px;
+  height: 340px;
+  display: grid;
+  place-items: center;
+}
+
+/* ── Particles ── */
+.splash-particle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  line-height: 1;
+  animation: particleFly var(--duration, 2000ms) cubic-bezier(0.2, 0.8, 0.2, 1) var(--delay, 0ms) both;
+  will-change: transform, opacity;
+}
+
+/* ── Expanding rings ── */
+.splash-rings {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.splash-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid var(--accent-warm);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+}
+
+.splash-ring--1 {
+  width: 80px;
+  height: 80px;
+  animation: ringExpand 0.8s ease-out 0.1s both;
+  border-color: var(--accent-warm);
+}
+
+.splash-ring--2 {
+  width: 160px;
+  height: 160px;
+  animation: ringExpand 0.9s ease-out 0.25s both;
+  border-color: var(--accent-hot);
+}
+
+.splash-ring--3 {
+  width: 260px;
+  height: 260px;
+  animation: ringExpand 1s ease-out 0.4s both;
+  border-color: var(--accent-mango);
+}
+
+@keyframes ringExpand {
+  0%   { transform: translate(-50%, -50%) scale(0); opacity: 0.9; }
+  100% { transform: translate(-50%, -50%) scale(1.8); opacity: 0; }
+}
+
+/* ── Message ── */
+.splash-msg {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  animation: splashMsgIn 0.6s var(--ease-out) 0.3s both;
+}
+
+.splash-icon {
+  font-size: 56px;
+  animation: floatSway 2.5s ease-in-out infinite;
+  margin-bottom: 4px;
+}
+
+.splash-msg h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.splash-msg p {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+}
+
+.splash-msg span {
+  font-size: var(--text-xs);
+  color: var(--accent-warm);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 4px;
+  animation: pulseGlow 1.5s ease-in-out infinite;
+}

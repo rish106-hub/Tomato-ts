@@ -1,0 +1,22 @@
+.floating-foods {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.floating-food-item {
+  position: absolute;
+  animation: floatUp linear infinite;
+  opacity: 0.06;
+  user-select: none;
+  will-change: transform, opacity;
+  filter: blur(0.3px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-food-item {
+    display: none;
+  }
+}

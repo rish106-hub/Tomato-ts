@@ -3,21 +3,61 @@ import './FoodDisplay.css'
 import FoodItem from '../FoodItem/FoodItem'
 import { StoreContext } from '../../Context/StoreContext'
 
+const CATEGORY_COPY = {
+  All: {
+    kicker: "🍽️ Aaj Kya Khayega?",
+    title: "Jo Delhi order karti hai — sab yahan hai. Teri bhook ka jawab.",
+  },
+  Salad: {
+    kicker: "🥗 Healthy Bhi, Tasty Bhi",
+    title: "Guilt-free khana jo actually swadisht hota hai. Fitness bhi, feast bhi.",
+  },
+  Rolls: {
+    kicker: "🌯 Roll Pe Roll!",
+    title: "Egg roll, paneer roll, chicken roll — haath mein pakad, muh mein daal. Bas yahi chahiye tha.",
+  },
+  Deserts: {
+    kicker: "🍮 Meetha Time Aa Gaya",
+    title: "Khana kha liya, ab reward toh banta hai na? Ek meetha aur le le.",
+  },
+  Sandwich: {
+    kicker: "🥪 Sandwich Game Strong",
+    title: "Tawa grilled, loaded, garam — yeh teri canteen wali sandwich nahi hai bhai.",
+  },
+  Cake: {
+    kicker: "🎂 Cake Toh Banta Hai",
+    title: "Birthday ho ya bina wajah — cake ke liye koi occasion nahi chahiye. Order kar.",
+  },
+  "Pure Veg": {
+    kicker: "🌿 100% Shakahari, 100% Fire",
+    title: "Veg hone ka matlab boring nahi hota. Ye dishes prove karti hain.",
+  },
+  Pasta: {
+    kicker: "🍝 Pasta Bhai Pasta",
+    title: "Italian vibes, desi stomach. Creamy, cheesy, loaded — bilkul tere liye bana hai.",
+  },
+  Noodles: {
+    kicker: "🍜 Noodle Life Choose Kiya",
+    title: "Hakka, chowmein, schezwan — har mood ke liye ek noodle. Utha fork, shuru ho jaa.",
+  },
+}
+
 const FoodDisplay = ({category}) => {
 
   const {food_list, filteredFoodList, searchQuery} = useContext(StoreContext);
 
-  // Use filtered list if there's a search query, otherwise use original list
   const displayList = searchQuery.trim() ? filteredFoodList : food_list;
   const visibleItems = displayList.filter((item) => category === "All" || category === item.category);
+  const copy = CATEGORY_COPY[category] || {
+    kicker: `🔥 ${category} — Bilkul Sahi Choice`,
+    title: `${category} jo ghar pe bana nahi sakta — isliye hum hain. Garam garam order kar.`,
+  }
 
   return (
     <div className='food-display' id='food-display'>
       <div className='food-display-header'>
-        <p className="food-display-kicker">{category === "All" ? "Delhi NCR favourites for tonight" : `${category} that lands fast in NCR`}</p>
-        <h2 className="food-display-title">
-          {category === "All" ? "High-hunger dishes shaped around what Delhi, Noida and Gurgaon actually order." : `${category} worth ordering before the craving turns into compromise.`}
-        </h2>
+        <p className="food-display-kicker">{copy.kicker}</p>
+        <h2 className="food-display-title">{copy.title}</h2>
       </div>
       <div className='food-display-list'>
         {visibleItems.length > 0 ? (

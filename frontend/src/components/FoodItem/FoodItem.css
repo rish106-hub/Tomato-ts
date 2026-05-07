@@ -120,8 +120,9 @@
 }
 
 .food-item-name-rating p {
+  font-family: var(--font-display);
   font-size: var(--text-base);
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text-primary);
 }
 

@@ -9,7 +9,7 @@ const ExploreMenu = ({ category, setCategory }) => {
   return (
     <div className='explore-menu' id='explore-menu'>
       <div className='explore-menu-header'>
-        <h2 className='explore-menu-title'>What are you craving?</h2>
+        <h2 className='explore-menu-title'>Aaj Kya Khaega? 🤤</h2>
       </div>
       <div className="explore-menu-list" role="list">
         <button

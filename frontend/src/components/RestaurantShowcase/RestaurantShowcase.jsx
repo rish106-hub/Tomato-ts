@@ -16,11 +16,11 @@ const RestaurantShowcase = ({ limit, showHeader = true }) => {
     <section className='restaurant-showcase' id='restaurant-showcase'>
       {showHeader && (
         <div className='restaurant-showcase-header'>
-          <p className='restaurant-showcase-kicker'>Restaurants</p>
-          <h2 className='restaurant-showcase-title'>Marketplace-first kitchens, not anonymous menu rows.</h2>
+          <p className='restaurant-showcase-kicker'>🔥 Hot Spots Near You</p>
+          <h2 className='restaurant-showcase-title'>Delhi ke sabse fire restaurants — ek hi jagah.</h2>
           <p className='restaurant-showcase-copy'>
-            Each restaurant carries its own cuisine identity, average ticket size, feedback, ETA and menu highlights so the
-            storefront reads closer to Zomato or Swiggy than a single-kitchen catalogue.
+            Chandni Chowk ke paranthe se leke Lajpat ke momos tak — sab yahan hain.
+            Ratings real hain, delivery garam hai. Tu bas order kar.
           </p>
         </div>
       )}

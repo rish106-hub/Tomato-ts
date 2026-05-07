@@ -21,8 +21,8 @@ const Cart = () => {
         <br /><hr />
         {cartEntries.length === 0 ? (
           <div className="cart-empty">
-            <h2>Your cart is empty</h2>
-            <p>Add some delicious items to get started!</p>
+            <h2>Yaar, cart toh bharo pehle 😭</h2>
+            <p>Chal menu pe ja, kuch toh order kar. Bhook teri, choice teri.</p>
           </div>
         ) : cartEntries.map((item) => (
           <div key={item._id}>
@@ -49,7 +49,7 @@ const Cart = () => {
             <hr />
             <div className="cart-total-details"><b>Total</b><b>{formatPrice(subtotal === 0 ? 0 : subtotal + deliveryCharge, currency)}</b></div>
           </div>
-          <button onClick={() => navigate('/order')} disabled={subtotal === 0}>PROCEED TO CHECKOUT</button>
+          <button onClick={() => navigate('/order')} disabled={subtotal === 0}>Abb Kha — Checkout Karo 🚀</button>
         </div>
         <div className="cart-promocode">
           <div>

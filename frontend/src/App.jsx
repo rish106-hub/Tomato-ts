@@ -17,6 +17,8 @@ import AdminApp from './pages/Admin/AdminApp'
 import Footer from './components/Footer/Footer'
 import Navbar from './components/Navbar/Navbar'
 import LoginPopup from './components/LoginPopup/LoginPopup'
+import FoodCursor from './components/FoodCursor/FoodCursor'
+import FloatingFoods from './components/FloatingFoods/FloatingFoods'
 import { StoreContext } from './Context/StoreContext'
 
 // Only renders children if token exists, else shows login popup
@@ -32,6 +34,8 @@ const CustomerApp = () => {
 
   return (
     <>
+      <FoodCursor />
+      <FloatingFoods />
       {showLogin && <LoginPopup setShowLogin={setShowLogin} />}
       <div className='app'>
         <Navbar setShowLogin={setShowLogin} />

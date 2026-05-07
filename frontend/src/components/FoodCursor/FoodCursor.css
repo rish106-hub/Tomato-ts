@@ -1,0 +1,38 @@
+.food-cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 99999;
+  font-size: 22px;
+  transform: translate(-4px, -4px);
+  transition: transform 0.08s var(--ease-out);
+  will-change: transform;
+  filter: drop-shadow(0 0 6px rgba(255, 85, 0, 0.6));
+  line-height: 1;
+}
+
+.food-cursor--click {
+  transform: translate(-4px, -4px) scale(1.35) rotate(15deg);
+  filter: drop-shadow(0 0 12px rgba(255, 85, 0, 0.9));
+}
+
+.cursor-trail {
+  position: fixed;
+  pointer-events: none;
+  z-index: 99998;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-warm);
+  will-change: transform, opacity;
+}
+
+/* Hide cursor only on desktop */
+@media (pointer: coarse) {
+  .food-cursor, .cursor-trail {
+    display: none;
+  }
+
+  body {
+    cursor: auto !important;
+  }
+}

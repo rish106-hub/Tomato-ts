@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-content-left">
           <img src={assets.logo} alt="Crave" />
-          <p>Crave brings Delhi NCR's best kitchens to your door — fast, fresh, and reliable. From biryani in Noida to momos in CP, we connect real restaurants with hungry people across the city.</p>
+          <p>Delhi ki bhook ka solution. Butter chicken se momos tak, biryani se chaat tak — 500+ restaurants, sab ek jagah. Garam garam, tere darwaze tak. 🔥</p>
           <div className="footer-social-icons">
             <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook">
               <img src={assets.facebook_icon} alt="Facebook" />
