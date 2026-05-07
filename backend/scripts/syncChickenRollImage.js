@@ -34,7 +34,7 @@ const run = async () => {
 
 run().catch(async (error) => {
   console.error("Failed to sync Chicken Roll image:", error);
-  const hasActiveOrPendingConnection = mongoose.connection.readyState !== 0;
+  const hasActiveOrPendingConnection = [1, 2].includes(mongoose.connection.readyState);
   if (hasActiveOrPendingConnection) {
     await mongoose.disconnect();
   }

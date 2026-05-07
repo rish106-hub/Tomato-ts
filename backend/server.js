@@ -8,6 +8,7 @@ import foodRouter from "./routes/foodRoute.js";
 import cartRouter from "./routes/cartRoute.js";
 import orderRouter from "./routes/orderRoute.js";
 import adminRouter from "./routes/adminRoute.js";
+import reviewRouter from "./routes/reviewRoute.js";
 
 // 🔥 Global Error Handlers (never let your app die silently)
 process.on("uncaughtException", (err) => {
@@ -53,6 +54,7 @@ const apiRoutes = (prefix = '') => {
   app.use(`${prefix}/api/cart`, cartRouter);
   app.use(`${prefix}/api/order`, orderRouter);
   app.use(`${prefix}/api/admin`, adminRouter);
+  app.use(`${prefix}/api/review`, reviewRouter);
 };
 
 // For Vercel deployment with /_/backend prefix
