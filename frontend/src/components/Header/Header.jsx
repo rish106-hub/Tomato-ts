@@ -1,4 +1,3 @@
-import React from 'react'
 import './Header.css'
 
 const Header = () => {
@@ -12,7 +11,7 @@ const Header = () => {
       <div className='header-contents'>
         <p className='header-eyebrow'>2 lakh+ Delhiites order with us every week</p>
         <h1 className='header-headline'>
-          Delhi's hunger,<br />
+          Delhi&apos;s hunger,<br />
           <em>answered in 30.</em>
         </h1>
         <p className='header-subtext'>
