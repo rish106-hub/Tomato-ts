@@ -74,7 +74,6 @@ const PlaceOrder = () => {
                 navigate("/myorders")
                 toast.success(response.data.message)
                 setCartItems({});
-                localStorage.removeItem('cartItems');
             }
             else {
                 toast.error("Something Went Wrong")
