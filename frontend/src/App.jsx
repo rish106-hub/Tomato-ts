@@ -1,4 +1,5 @@
-import React, { useContext, useState } from 'react'
+import { useContext, useState } from 'react'
+import PropTypes from 'prop-types'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -27,6 +28,11 @@ const ProtectedRoute = ({ element, setShowLogin }) => {
   if (token) return element
   setShowLogin(true)
   return <Navigate to="/" replace />
+}
+
+ProtectedRoute.propTypes = {
+  element: PropTypes.element.isRequired,
+  setShowLogin: PropTypes.func.isRequired,
 }
 
 const CustomerApp = () => {

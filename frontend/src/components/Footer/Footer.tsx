@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
       <div className="footer-content">
         <div className="footer-content-left">
           <span className="footer-brand-wordmark">crave</span>
-          <p>Premium food delivery, curated for the discerning palate. Feed your craving, any time.</p>
+          <p>Garma garam butter chicken, crispy momos, smoking hot biryani — 30 min mein ghar tak. Feed your craving.</p>
           <div className="footer-social-icons">
             <img
               src={assets.facebook_icon}

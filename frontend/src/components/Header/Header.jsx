@@ -31,15 +31,15 @@ const Header = () => {
       <div className='header-contents'>
         <p className='header-eyebrow'>
           <span className="eyebrow-dot" />
-          Delhi ka No.1 Hunger Fix
+          Delhi Ka No. 1 Bhook Fix
         </p>
         <h1 className='header-headline'>
-          Bhook lagi?
-          <em>Karo Order.</em>
+          Smoking Hot.
+          <em>Ghar Tak.</em>
         </h1>
         <p className='header-subtext'>
-          Butter chicken, momos, biryani — jo bhi mann kare,
-          tere darwaze tak garam garam. No jaddo, no drama. Bas feast.
+          Butter chicken, biryani, momos — garma garam,
+          30 min mein tere darwaze tak.
         </p>
         <div className='header-stats'>
           <div className='stat'>

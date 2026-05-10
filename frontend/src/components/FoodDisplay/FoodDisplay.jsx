@@ -5,28 +5,28 @@ import { StoreContext } from '../../Context/StoreContext'
 
 const CATEGORY_COPY = {
   All: {
-    kicker: "🍽️ Aaj Kya Khayega?",
-    title: "Jo Delhi order karti hai — sab yahan hai. Teri bhook ka jawab.",
+    kicker: "🍽️ Jhatpat Order Kar",
+    title: "Jo Delhi order karti hai — sab yahan. Teri bhook ka jawab.",
   },
   Salad: {
-    kicker: "🥗 Healthy Bhi, Tasty Bhi",
-    title: "Guilt-free khana jo actually swadisht hota hai. Fitness bhi, feast bhi.",
+    kicker: "🥗 Fresh Kata, Feast Jaisa",
+    title: "Crisp, fresh, loaded — healthy ka excuse nahi, yeh toh feast hai.",
   },
   Rolls: {
     kicker: "🌯 Roll Pe Roll!",
-    title: "Egg roll, paneer roll, chicken roll — haath mein pakad, muh mein daal. Bas yahi chahiye tha.",
+    title: "Egg roll, paneer roll, chicken roll — haath mein lo, muh mein daalo. Aur kya chahiye bhai?",
   },
   Deserts: {
-    kicker: "🍮 Meetha Time Aa Gaya",
-    title: "Khana kha liya, ab reward toh banta hai na? Ek meetha aur le le.",
+    kicker: "🍮 Meetha Khao, Khush Raho",
+    title: "Khana kha liya? Reward toh banta hai. Ek meetha aur le lo.",
   },
   Sandwich: {
-    kicker: "🥪 Sandwich Game Strong",
-    title: "Tawa grilled, loaded, garam — yeh teri canteen wali sandwich nahi hai bhai.",
+    kicker: "🥪 Grilled. Loaded. Garam.",
+    title: "Tawa grilled, loaded, garam — canteen wali nahi hai yeh bhai. Next level stuff.",
   },
   Cake: {
     kicker: "🎂 Cake Toh Banta Hai",
-    title: "Birthday ho ya bina wajah — cake ke liye koi occasion nahi chahiye. Order kar.",
+    title: "Birthday ho ya bas craving — slice ka time aa gaya hai.",
   },
   "Pure Veg": {
     kicker: "🌿 100% Shakahari, 100% Fire",

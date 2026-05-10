@@ -48,7 +48,7 @@ const Navbar = ({ setShowLogin }) => {
         </Link>
 
         {!token
-          ? <button onClick={() => setShowLogin(true)}>sign in</button>
+          ? <button type="button" onClick={() => setShowLogin(true)} aria-haspopup="dialog">Sign in / Sign up</button>
           : <div className='navbar-profile'>
               <img src={assets.profile_icon} alt="Profile" />
               <ul className='navbar-profile-dropdown' role="menu">
